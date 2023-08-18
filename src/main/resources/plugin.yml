@@ -1,0 +1,35 @@
+name: TPA
+version: '0.0.1'
+main: net.taigamc.tpa.TPAPlugin
+api-version: '1.20'
+permissions:
+  'tpa.request.self': {}
+  'tpa.request.other': {}
+  'tpa.request':
+    children:
+      - tpa.request.self
+      - tpa.request.other
+  'tpa.accept': {}
+  'tpa.admin':
+    default: op
+    children:
+      - tpa.request
+      - tpa.accept
+  'tpa.user':
+    default: not op
+    children:
+      - tpa.request
+      - tpa.accept
+commands:
+  tpareloadconfig:
+    description: reloads plugin config
+    usage: /tpareloadconfig
+  tpa:
+    description: Send a request to teleport to someone
+    usage: /tpa <target player>
+  tpaself:
+    description: Send a request to teleport someone to you
+    usage: /tpaself <player>
+  tpaccept:
+    description: Accept a TPA request from someone or latest request
+    usage: /taccept <player>
