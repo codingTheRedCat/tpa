@@ -10,4 +10,5 @@ If you want a feature dont be afraid to issue and PR youself because I don't hav
 # Wanted features:
  - internatiolization (No person yet)
  - windows test-server script (No person yet)
+
 Apply for a feature by editing this file and message me (jan.alex.strakowski@gmail.com).
